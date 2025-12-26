@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>X Following Tab Auto-Select</title>
+    <style>
+        body {
+            width: 280px;
+            padding: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            background: #1d9bf0;
+            border-radius: 4px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: #0f1419;
+        }
+
+        .status {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .status.active {
+            background-color: #e8f5e8;
+            color: #0d5016;
+            border: 1px solid #a3d9a5;
+        }
+
+        .status.inactive {
+            background-color: #fef7e0;
+            color: #9a6700;
+            border: 1px solid #f7d794;
+        }
+
+        .description {
+            color: #536471;
+            margin-bottom: 16px;
+        }
+
+        .info {
+            font-size: 12px;
+            color: #657786;
+            padding: 8px;
+            background-color: #f7f9fa;
+            border-radius: 6px;
+        }
+
+        .info strong {
+            color: #0f1419;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="icon"></div>
+        <h1>Following Tab Auto-Select</h1>
+    </div>
+
+    <div class="status" id="status">
+        <strong id="status-text">Checking status...</strong>
+    </div>
+
+    <div class="description">
+        This extension automatically selects the "Following" tab when you navigate to X.com from external sources (bookmarks, address bar, or links from other websites).
+    </div>
+
+    <div class="info">
+        <strong>How it works:</strong><br>
+        • Only activates on fresh navigation to X.com<br>
+        • Works in any language<br>
+        • Uses position-based tab detection<br>
+        • No settings needed - it just works!
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

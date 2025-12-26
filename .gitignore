@@ -1,0 +1,82 @@
+# Build directories
+dist/
+build/
+web-ext-artifacts/
+
+# Distribution files
+*.zip
+*.xpi
+*.crx
+*.pem
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and configuration
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Browser extension specific
+# Chrome extension private keys
+*.pem
+key.pem
+
+# Firefox extension signing
+web-ext-artifacts/
+
+# Safari extension
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+
+# Development certificates
+*.p12
+*.cer
+
+# Logs
+logs/
+*.log
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# TypeScript (if used in future)
+*.tsbuildinfo
+
+# Source maps (uncomment if you don't want to commit them)
+# *.map
+
+# Backup files
+*.bak
+*.backup
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

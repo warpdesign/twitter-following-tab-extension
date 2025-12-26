@@ -1,0 +1,37 @@
+{
+  "name": "twitter-following-tab-extension",
+  "version": "1.0.0",
+  "description": "Browser extension that automatically selects the Following tab when navigating to X.com, skipping the default For You timeline",
+  "scripts": {
+    "build": "npm run copy-files",
+    "build:prod": "npm run copy-files && npm run zip",
+    "copy-files": "mkdir -p dist && cp manifest.json content-script.js dist/ && cp -r icons dist/ 2>/dev/null || true && cp -r popup dist/ 2>/dev/null || true",
+    "zip": "cd dist && zip -r ../twitter-following-tab-extension.zip .",
+    "dev": "npm run build && npm run watch",
+    "watch": "echo 'Watching for changes...' && npm run copy-files && fswatch -o manifest.json content-script.js popup/ icons/ | xargs -n1 -I{} npm run copy-files",
+    "clean": "rm -rf dist twitter-following-tab-extension.zip",
+    "lint": "echo 'Linting JavaScript files...' && jshint content-script.js || echo 'Install jshint globally: npm install -g jshint'",
+    "test-load": "echo 'To test the extension:' && echo '1. Open Chrome and go to chrome://extensions/' && echo '2. Enable Developer mode' && echo '3. Click \"Load unpacked\" and select the dist/ folder' && echo '4. Navigate to x.com to test the functionality'",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "chrome-extension",
+    "twitter",
+    "x.com",
+    "following",
+    "tab",
+    "auto-select"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jshint": "^2.13.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

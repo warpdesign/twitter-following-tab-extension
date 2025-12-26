@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "X Following Tab Auto-Select",
+  "version": "1.0.0",
+  "description": "Automatically switches to the Following timeline when you visit X.com, instead of the default For You feed",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": ["content-script.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "X Following Tab Auto-Select"
+  }
+}
